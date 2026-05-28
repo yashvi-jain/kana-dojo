@@ -571,9 +571,9 @@
     "secondaryColor": "oklch(68.0% 0.110 310.0 / 1)"
   },
   {
-  id: 'golden-kintsugi',
-  backgroundColor: 'oklch(20.0% 0.020 70.0 / 1)',
-  mainColor: 'oklch(85.0% 0.155 85.0 / 1)',
-  secondaryColor: 'oklch(60.0% 0.085 25.0 / 1)'
+  "id": "golden-kintsugi",
+  "backgroundColor": "oklch(20.0% 0.020 70.0 / 1)",
+  "mainColor": "oklch(85.0% 0.155 85.0 / 1)",
+  "secondaryColor": "oklch(60.0% 0.085 25.0 / 1)"
 }
 ]
