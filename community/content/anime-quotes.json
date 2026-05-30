@@ -579,5 +579,40 @@
   "english": "Shishishi!",
   "anime": "One Piece",
   "character": "Monkey D. Luffy"
-}
+  },
+  {
+    "japanese": "おまえはもう死んでいる",
+    "romaji": "Omae wa mou shindeiru",
+    "english": "You're already dead.",
+    "anime": "Fist of the North Star",
+    "character": "Kenshiro"
+  },
+  {
+    "japanese": "明日の問題は明日の俺に任せる",
+    "romaji": "Ashita no mondai wa ashita no ore ni makaseru",
+    "english": "I'll leave tomorrow's problems to tomorrow's me.",
+    "anime": "One Punch Man",
+    "character": "Saitama"
+  },
+  {
+    "japanese": "痛みを伴わない教訓には意味がない",
+    "romaji": "Itami o tomonawanai kyoukun ni wa imi ga nai",
+    "english": "A lesson without pain is meaningless.",
+    "anime": "Fullmetal Alchemist: Brotherhood",
+    "character": "Edward Elric"
+  },
+  {
+    "japanese": "オラに元気を分けてくれ!",
+    "romaji": "Ora ni genki o wakete kure!",
+    "english": "Lend me your energy!",
+    "anime": "Dragon Ball Z",
+    "character": "Son Goku"
+  },
+  {
+    "japanese": "月に代わっておしおきよ!",
+    "romaji": "Tsuki ni kawatte oshioki yo!",
+    "english": "In the name of the moon, I'll punish you!",
+    "anime": "Sailor Moon",
+    "character": "Usagi Tsukino"
+  }
 ]
