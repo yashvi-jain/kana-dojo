@@ -1397,7 +1397,9 @@
     "mainColor": "oklch(80.0% 0.055 215.0 / 1)",
     "secondaryColor": "oklch(62.0% 0.045 240.0 / 1)",
     "issued": false,
-    "completed": false
+    "completed": false,
+    "completedBy": "veeresh4520",
+    "completedPR": 19653
   },
   {
     "id": "matcha-foam",
