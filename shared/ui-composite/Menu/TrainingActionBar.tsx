@@ -5,6 +5,7 @@ import { useKanaSelection } from '@/features/Kana';
 import { useKanjiSelection } from '@/features/Kanji';
 import { useVocabSelection } from '@/features/Vocabulary';
 import { useInputPreferences } from '@/features/Preferences';
+import usePreferencesStore from '@/features/Preferences/store/usePreferencesStore';
 import { useClick } from '@/shared/hooks/generic/useAudio';
 import { Play, Zap, Swords } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -27,6 +28,9 @@ const TrainingActionBar: React.FC<ITopBarProps> = ({
   currentDojo,
 }: ITopBarProps) => {
   const { hotkeysOn } = useInputPreferences();
+  const showExperimentalModes = usePreferencesStore(
+    state => state.showExperimentalModes,
+  );
 
   const { playClick } = useClick();
 
@@ -274,33 +278,37 @@ const TrainingActionBar: React.FC<ITopBarProps> = ({
               )}
             >
               {[
-                // {
-                //   id: 'blitz',
-                //   label: 'Blitz',
-                //   Icon: Zap,
-                //   iconClassName: 'fill-current motion-safe:animate-none',
-                //   show: showBlitz,
-                //   colorScheme: 'secondary' as const,
-                //   onClick: () => {
-                //     setGameModesMode('blitz');
-                //     setShowGameModesModal(true);
-                //   },
-                // },
-                // {
-                //   id: 'gauntlet',
-                //   label: 'Gauntlet',
-                //   Icon: Swords,
-                //   iconClassName: 'fill-current',
-                //   show: showBlitz,
-                //   colorScheme: 'secondary' as const,
-                //   onClick: () => {
-                //     setGameModesMode('gauntlet');
-                //     setShowGameModesModal(true);
-                //   },
-                // },
+                ...(showExperimentalModes
+                  ? [
+                      {
+                        id: 'blitz' as const,
+                        label: 'Blitz' as const,
+                        Icon: Zap,
+                        iconClassName: 'fill-current motion-safe:animate-none',
+                        show: showBlitz,
+                        colorScheme: 'secondary' as const,
+                        onClick: () => {
+                          setGameModesMode('blitz');
+                          setShowGameModesModal(true);
+                        },
+                      },
+                      {
+                        id: 'gauntlet' as const,
+                        label: 'Gauntlet' as const,
+                        Icon: Swords,
+                        iconClassName: 'fill-current',
+                        show: showBlitz,
+                        colorScheme: 'secondary' as const,
+                        onClick: () => {
+                          setGameModesMode('gauntlet');
+                          setShowGameModesModal(true);
+                        },
+                      },
+                    ]
+                  : []),
                 {
-                  id: 'classic',
-                  label: 'Go',
+                  id: 'classic' as const,
+                  label: 'Go' as const,
                   Icon: Play,
                   iconClassName: isFilled ? 'fill-current' : '',
                   show: true,
